@@ -501,8 +501,8 @@
   .rewards-section-title iconify-icon { font-size:20px; }
   .rewards-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
   .reward-card { border-radius:var(--radius-sm); padding:14px; text-align:center; cursor:pointer; position:relative; overflow:hidden; }
-  .reward-card.nft { border-color:rgba(139,92,246,0.15); background:linear-gradient(180deg, rgba(139,92,246,0.04), var(--bg-card)); }
-  .reward-card.nft::after {
+  .reward-card.collection { border-color:rgba(139,92,246,0.15); background:linear-gradient(180deg, rgba(139,92,246,0.04), var(--bg-card)); }
+  .reward-card.collection::after {
     content:''; position:absolute; inset:0; pointer-events:none; opacity:0; transition:opacity 0.4s;
     background:conic-gradient(from 0deg, rgba(139,92,246,0.08), rgba(236,72,153,0.06), rgba(245,158,11,0.06), rgba(16,185,129,0.06), rgba(59,130,246,0.08), rgba(139,92,246,0.08));
     background-size:200% 200%; animation:holoShift 4s linear infinite;
@@ -526,13 +526,13 @@
     position:relative; overflow:hidden;
   }
   .reward-price:active { transform:scale(0.95); }
-  .reward-price.nft-btn { background:var(--gradient-purple); }
+  .reward-price.collection-btn { background:var(--gradient-purple); }
   .reward-price iconify-icon { font-size:14px; }
   .reward-tag {
     display:inline-flex; align-items:center; gap:3px; padding:3px 8px; border-radius:6px;
     font-size:9px; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:8px;
   }
-  .tag-nft { background:rgba(139,92,246,0.1); color:#A78BFA; }
+  .tag-collection { background:rgba(139,92,246,0.1); color:#A78BFA; }
   .tag-limited { background:rgba(245,158,11,0.1); color:var(--accent); animation:badgePulse 2s ease-in-out infinite; }
   .tag-new { background:rgba(16,185,129,0.1); color:var(--primary); }
   @keyframes badgePulse { 0%,100%{opacity:1} 50%{opacity:0.6} }
@@ -1069,20 +1069,20 @@
           <div class="rewards-balance-icon"><iconify-icon icon="mdi:star-four-points-circle"></iconify-icon></div>
         </div>
       </div>
-      <div class="rewards-section-title"><iconify-icon icon="mdi:palette" style="color:#8B5CF6"></iconify-icon> NFT Collectibles</div>
+      <div class="rewards-section-title"><iconify-icon icon="mdi:palette" style="color:#8B5CF6"></iconify-icon> Collections</div>
       <div class="rewards-grid">
-        <div class="reward-card nft"><div class="reward-tag tag-nft">NFT</div>
+        <div class="reward-card collection"><div class="reward-tag tag-collection">COLLECTION</div>
           <div class="reward-art" style="background-image:url('https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?w=400&h=260&fit=crop&q=80')"></div>
           <div class="reward-name">Earth Guardian</div><div class="reward-desc">Limited digital collectible</div>
-          <button class="reward-price nft-btn" onclick="redeemReward(this,'Earth Guardian')"><iconify-icon icon="mdi:star-four-points"></iconify-icon> 500</button></div>
-        <div class="reward-card nft"><div class="reward-tag tag-limited">LIMITED</div>
+          <button class="reward-price collection-btn" onclick="redeemReward(this,'Earth Guardian')"><iconify-icon icon="mdi:star-four-points"></iconify-icon> 500</button></div>
+        <div class="reward-card collection"><div class="reward-tag tag-limited">LIMITED</div>
           <div class="reward-art" style="background-image:url('https://images.unsplash.com/photo-1522383225653-ed111181a951?w=400&h=260&fit=crop&q=80')"></div>
           <div class="reward-name">Cherry Blossom</div><div class="reward-desc">Spring event exclusive</div>
-          <button class="reward-price nft-btn" onclick="redeemReward(this,'Cherry Blossom')"><iconify-icon icon="mdi:star-four-points"></iconify-icon> 800</button></div>
-        <div class="reward-card nft"><div class="reward-tag tag-nft">NFT</div>
+          <button class="reward-price collection-btn" onclick="redeemReward(this,'Cherry Blossom')"><iconify-icon icon="mdi:star-four-points"></iconify-icon> 800</button></div>
+        <div class="reward-card collection"><div class="reward-tag tag-collection">COLLECTION</div>
           <div class="reward-art" style="background-image:url('https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=400&h=260&fit=crop&q=80')"></div>
           <div class="reward-name">Butterfly Effect</div><div class="reward-desc">Animated digital art</div>
-          <button class="reward-price nft-btn" onclick="redeemReward(this,'Butterfly Effect')"><iconify-icon icon="mdi:star-four-points"></iconify-icon> 1200</button></div>
+          <button class="reward-price collection-btn" onclick="redeemReward(this,'Butterfly Effect')"><iconify-icon icon="mdi:star-four-points"></iconify-icon> 1200</button></div>
       </div>
       <div class="rewards-section-title"><iconify-icon icon="mdi:gift-outline" style="color:var(--primary)"></iconify-icon> Physical Rewards</div>
       <div class="rewards-grid">
